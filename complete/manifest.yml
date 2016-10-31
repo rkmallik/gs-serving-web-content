@@ -1,0 +1,7 @@
+---
+applications:
+- name: ronakdemo
+  memory: 1024M
+  host: ronakdemo
+  domain: cfapps.io
+  buildpack: java_buildpack

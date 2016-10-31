@@ -11,13 +11,9 @@ public class GreetingController {
     @RequestMapping("/greeting")
     public String greeting(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
         model.addAttribute("name", name);
+        model.addAttribute("instance", System.getenv("CF_INSTANCE_INDEX"));
         return "greeting";
     }
     
-    @RequestMapping("/instance")
-    public String instance(Model model) {
-        model.addAttribute("instance", System.getenv("CF_INSTANCE_INDEX"));
-        return "instance";
-    }
 }
 

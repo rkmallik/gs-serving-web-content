@@ -13,5 +13,11 @@ public class GreetingController {
         model.addAttribute("name", name);
         return "greeting";
     }
-
+    
+    @RequestMapping("/instance")
+    public String instance(Model model) {
+        model.addAttribute("instance", System.getenv("CF_INSTANCE_INDEX"));
+        return "instance";
+    }
 }
+

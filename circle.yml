@@ -20,4 +20,4 @@ deployment:
   production:
     branch: master
     commands:
-      - cf push -p complete/target/gs-serving-web-content-0.1.0.jar
+      - cf push -p target/gs-serving-web-content-0.1.0.jar
